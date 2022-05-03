@@ -9,9 +9,64 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script defer src="js/main.js"></script>
-  
+
 </head>
 <body>
+
+  <header class="header">
+    <img src="assets/logo/logo.png" alt="Letter 'a' for 'Alura Latam">
+  </header>
+
+  <main class="main">
+    <form action="#" id="entry-form" class="entry-form">
+      <div class="wrapper-input">
+        <textarea name="input-txt" id="input-txt" cols="30" rows="10" class="input-txt" placeholder="Ingrese el texto aquí"></textarea>
+        <button id="paste-btn" class="paste-btn">
+          <img src="assets/icon/paste.svg" alt="Paste icon" class="icon">
+          Pegar
+        </button>
+      </div>
+
+      <div class="wrapper-info">
+        <img src="assets/icon/alert.png" alt="Warning sign">
+        <span>
+          Solo letras minúsculas y sin acentos
+        </span>
+      </div>
+
+      <div class="wrapper-btn">
+        <button id="encrypt-btn" class="encrypt-btn btn">
+          Encriptar
+        </button>
+        <button id="decrypt-btn" class="decrypt-btn btn">
+          Desencriptar
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <section class="hero">
+    <img src="assets/image/doll.png" alt="A person deciphering something">
+    <h2>
+      Ningún mensaje fue encontrado
+    </h2>
+    <p>
+      Ingresa el texto que desees encriptar o desencriptar.
+    </p>
+  </section>
+
+  <form action="#" id="result-form" class="result-form">
+    <textarea name="output-txt" id="output-txt" cols="30" rows="10" class="output-txt"></textarea>
+    <button id="copy-btn" class="copy-btn btn">
+      <img src="assets/icon/copy.svg" alt="Copy icon" class="icon">
+      Copiar
+    </button>
+  </form>
   
+  <footer>
+    <p class="attr">
+      Challenge by <a href="#" class="attr__lnk" target="_blank">Alura</a> - Coded by <a href="#" class="attr__lnk" target="_blank">Irs</a> ♪
+    </p>
+  </footer>
 </body>
 </html>
