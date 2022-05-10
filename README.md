@@ -31,7 +31,7 @@ Esta es mi solución para el Challenge ORACLE + Alura LATAM [Encriptador de text
 
 ## Link
 
-- [Live](https://irs-mp.github.io/qr-code/) 👀
+- [Live](https://irs-mp.github.io/encryption/) 👀
 
 ## Desarrollado con
 
@@ -43,7 +43,7 @@ Esta es mi solución para el Challenge ORACLE + Alura LATAM [Encriptador de text
 
 ## Qué he aprendido
 
-- He aprendido muchas cosas con este desafío, todo javascript es nuevo para mí.
+- He aprendido mucho con este desafío. Todo javascript es nuevo para mí.
 - La sección de encriptación es lo que más me ha costado:
 
   - Creamos un array vacio
