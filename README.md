@@ -1,4 +1,4 @@
-# Alura Latam - Encriptador
+# Alura Latam - Encriptador 🔐
 
 Hola 👋
 
@@ -20,6 +20,10 @@ Esta es mi solución para el Challenge ORACLE + Alura LATAM [Encriptador de text
 - Mobile
 
 ![Mobile](./assets/image/sample-mobile.png)
+
+- Tablet
+
+![Tablet](./assets/image/sample-tablet.png)
 
 - Desktop
 

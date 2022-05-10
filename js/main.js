@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
 // -> VALIDATE INPUT
 function validInput(key) {
   if (inputTxt.value.match(validTxt)) {
-    alert('Solo letras minúsculas y sin acentos')
+    alert('Solo letras minúsculas y sin acentos 🧐')
     inputTxt.value = inputTxt.value.slice(0, -1)
   }
 }

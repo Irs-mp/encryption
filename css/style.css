@@ -30,22 +30,22 @@ body{
 
 :root{
   --inter: 'Inter', sans-serif;
-  --bg-main: #F3F5FC;
-  --dark-blue: #0A3871;
-  --gray: #D8DFE8;
-  --gray-500: #343A40;
-  --gray-400: #495057;
-  --white: #fff;
+  --bg-main: hsl(227, 60%, 97%);
+  --dark-blue: hsl(213, 84%, 24%);
+  --gray: hsl(214, 26%, 88%);
+  --gray-500: hsl(210, 10%, 23%);
+  --gray-400: hsl(210, 9%, 31%);
+  --white: hsl(0, 0%, 100%);
   --bd-rd: 1rem;
 }
 
 .header{
-  max-width: 1080px;
+  max-width: 67.5rem;
   padding: 1.5rem 1rem;
 }
 
 .main{
-  max-width: 1080px;
+  max-width: 67.5rem;
   margin-inline: auto;
   padding-inline: 1rem;
   display: flex;
@@ -89,17 +89,6 @@ body{
   border-radius: var(--bd-rd);
   cursor: pointer;
 }
-.encrypt-btn:hover,
-.copy-btn:hover{
-  background-color: hsl(213, 84%, 24%, .93);
-  transform: scale(1.03);
-}
-.decrypt-btn:hover,
-.reset-btn:hover{
-  background-color: hsl(50,0%, 0%, .8);
-  color: hsl(0, 0%, 100%);
-  transform: scale(1.03);
-}
 .paste-btn{
   display: block;
   margin-left: auto;
@@ -127,7 +116,7 @@ body{
 .result-form{
   margin-top: 4rem;
   border-radius: var(--bd-rd);
-  box-shadow: 0 1.5rem 2rem -.5rem rgba(0, 0, 0, .08);
+  box-shadow: 0 1.5rem 2rem -.5rem hsla(0, 0%, 0%, .08);
 }
 .hero{
   width: 100%;
@@ -175,9 +164,11 @@ body{
   color: var(--gray-500);
 }
 .attr__lnk{
+  position: relative;
   font-weight: 700;
   color: var(--dark-blue);
 }
+
 
 
 /* -> TABLET */
@@ -192,7 +183,7 @@ body{
     flex-wrap: unset;
   }
   .btn{
-    max-width: 332px;
+    max-width: 20.75rem;
   }
   .copy-btn{
     display: block;
@@ -225,7 +216,38 @@ body{
 }
 
 
+
 /* -> INPUT PLACEHOLDER */
 .input-txt::placeholder{
   color: var(--dark-blue);
+}
+
+
+/* -> FOOTER - HOVER STATE */
+.attr__lnk::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--dark-blue);
+  transform: scale(0);
+  transition: transform .2s ease-in-out;
+}
+.attr__lnk:hover::after{
+  transform: scale(1);
+}
+
+/* -> BUTTONS - HOVER STATE */
+.encrypt-btn:hover,
+.copy-btn:hover{
+  background-color: hsl(213, 84%, 24%, .93);
+  transform: scale(1.03);
+}
+.decrypt-btn:hover,
+.reset-btn:hover{
+  background-color: hsl(50,0%, 0%, .8);
+  color: hsl(0, 0%, 100%);
+  transform: scale(1.03);
 }
