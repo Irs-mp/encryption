@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Encriptación 🔐</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style-dist.css">
 
   <script defer src="js/main.js"></script>
 
 </head>
+
 <body>
 
   <header class="header">
@@ -20,11 +27,10 @@
   <main class="main">
     <form action="#" id="entry-form" class="entry-form">
       <div class="wrapper-input">
-        <textarea name="input-txt" id="input-txt" cols="30" rows="10" class="input-txt" placeholder="Ingrese el texto aquí"></textarea>
+        <textarea name="input-txt" id="input-txt" cols="30" rows="10" class="input-txt"
+          placeholder="Ingrese el texto aquí"></textarea>
         <button id="paste-btn" class="paste-btn">
-          <img src="assets/icon/paste.svg" alt="Paste icon" class="icon">
-          Pegar
-        </button>
+          <img src="assets/icon/paste.svg" alt="Paste icon" id="icon" class="icon"></button>
       </div>
 
       <div class="wrapper-info">
@@ -43,30 +49,37 @@
         </button>
       </div>
     </form>
+
+    <section id="hero" class="hero">
+      <img src="assets/image/doll.png" alt="A person deciphering something">
+      <h2 class="hero__ttl">
+        Ningún mensaje fue encontrado
+      </h2>
+      <p class="hero__prr">
+        Ingresa el texto que desees encriptar o desencriptar.
+      </p>
+    </section>
+
+    <form action="#" id="result-form" class="result-form">
+      <textarea name="output-txt" id="output-txt" cols="30" rows="10" class="output-txt"></textarea>
+      <div class="wrapper-btn">
+        <button id="copy-btn" class="copy-btn btn">
+          Copiar
+        </button>
+        <button id="reset-btn" class="reset-btn btn">Limpiar
+        </button>
+      </div>
+    </form>
   </main>
 
-  <section class="hero">
-    <img src="assets/image/doll.png" alt="A person deciphering something">
-    <h2>
-      Ningún mensaje fue encontrado
-    </h2>
-    <p>
-      Ingresa el texto que desees encriptar o desencriptar.
-    </p>
-  </section>
 
-  <form action="#" id="result-form" class="result-form">
-    <textarea name="output-txt" id="output-txt" cols="30" rows="10" class="output-txt"></textarea>
-    <button id="copy-btn" class="copy-btn btn">
-      <img src="assets/icon/copy.svg" alt="Copy icon" class="icon">
-      Copiar
-    </button>
-  </form>
-  
+
   <footer>
     <p class="attr">
-      Challenge by <a href="#" class="attr__lnk" target="_blank">Alura</a> - Coded by <a href="#" class="attr__lnk" target="_blank">Irs</a> ♪
+      Challenge by <a href="https://www.aluracursos.com/" class="attr__lnk" target="_blank">Alura</a> - Coded by <a href="#" class="attr__lnk"
+        target="_blank">Irs</a> ♪
     </p>
   </footer>
 </body>
+
 </html>

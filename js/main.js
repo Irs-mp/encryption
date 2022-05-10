@@ -5,6 +5,17 @@ const encryptBtn = document.getElementById('encrypt-btn')
 const decryptBtn = document.getElementById('decrypt-btn')
 const copyBtn = document.getElementById('copy-btn')
 const pasteBtn = document.getElementById('paste-btn')
+const resetBtn = document.getElementById('reset-btn')
+
+const resultForm = document.getElementById('result-form')
+const hero = document.getElementById('hero')
+const icon = document.getElementById('icon')
+
+// -> FOCUS
+window.addEventListener('load', () => {
+  inputTxt.focus()
+})
+
 
 // -> VALIDATE INPUT
 function validInput(key) {
@@ -14,11 +25,20 @@ function validInput(key) {
   }
 }
 inputTxt.addEventListener('keyup', validInput)
-//->
 
 // -> ENCRYPT
 function encrypt(e) {
   e.preventDefault()
+
+  if(inputTxt.value == ''){
+    alert('Ingrese texto a encriptar 🧐')
+    inputTxt.focus()
+  }
+
+  if(inputTxt.value != ''){
+  resultForm.classList.add('show-result')
+  hero.classList.add('hide-hero')
+
   let inputValue = inputTxt.value
   let newStr = []
   for (let i = 0; i < inputValue.length; i++) {
@@ -31,15 +51,22 @@ function encrypt(e) {
     newStr.push([newValue])
   }
   outputTxt.textContent = newStr.join('')
-  inputTxt.value = ''
+  copyBtn.focus()
+}
 }
 encryptBtn.addEventListener('click', encrypt)
-// ->
+
 
 // -> DECRYPT
 function decrypt(e) {
   e.preventDefault()
+  if (inputTxt.value == '') {
+    alert('Ingrese texto a decodificar 🧐')
+  }
   if (inputTxt.value != '') {
+    resultForm.classList.add('show-result')
+    hero.classList.add('hide-hero')
+
     let decryptTxt = inputTxt.value
       .replace(/enter/g, "e")
       .replace(/imes/g, "i")
@@ -48,26 +75,41 @@ function decrypt(e) {
       .replace(/ufat/g, 'u')
     outputTxt.textContent = decryptTxt
   }
-  inputTxt.value = ''
 }
 decryptBtn.addEventListener('click', decrypt)
-// ->
+
 
 // -> PASTE
 async function pasteTxt(e) {
   e.preventDefault()
+
+
   const textCopied = await navigator.clipboard.readText()
   inputTxt.value = textCopied
   outputTxt.textContent = ''
 }
 pasteBtn.addEventListener('click', pasteTxt)
-//  ->
+
 
 // -> COPY
 async function copyTxt(e) {
   e.preventDefault()
+
+  inputTxt.value = ''
   const textToCopy = await navigator.clipboard.writeText(outputTxt.value)
+  alert('Texto copiado 😉 \n Ulitice la combinación de teclas [ CTR ] + [ V ] \n o el botón pegar 😎')
+  inputTxt.focus()
 }
 copyBtn.addEventListener('click', copyTxt)
-// ->
 
+
+// -> RESET
+resetBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (resultForm.classList.contains('show-result')){
+    resultForm.classList.remove('show-result')
+    hero.classList.remove('hide-hero')
+  }
+  inputTxt.value = ''
+  inputTxt.focus()
+})

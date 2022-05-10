@@ -132,6 +132,7 @@ body{
 .hero{
   width: 100%;
   padding: 2rem;
+  display: -ms-grid;
   display: grid;
   justify-items: center;
   text-align: center;
@@ -149,6 +150,7 @@ body{
   display: none;
   padding: 2rem;
   align-items: center;
+  -ms-grid-rows: 1fr auto;
   grid-template-rows: 1fr auto;
   background-color: var(--white);
 }
@@ -159,6 +161,7 @@ body{
 
 /* -> SHOW / HIDE */
 .show-result{
+  display: -ms-grid;
   display: grid;
 }
 .hide-hero{
@@ -226,6 +229,12 @@ body{
 
 
 /* -> INPUT PLACEHOLDER */
+.input-txt::-moz-placeholder{
+  color: var(--dark-blue);
+}
+.input-txt:-ms-input-placeholder{
+  color: var(--dark-blue);
+}
 .input-txt::placeholder{
   color: var(--dark-blue);
 }
